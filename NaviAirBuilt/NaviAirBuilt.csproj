@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80AA83AF-9B93-4C46-B6F2-AD3640AC1905}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NaviAirBuilt</RootNamespace>
+    <AssemblyName>NaviAirBuilt</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="HandyControl, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HandyControl.2.2.0\lib\net47\HandyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LinnerToolkit.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\LinnerToolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LinnerToolkit.Desktop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\LinnerToolkit.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="LinnerToolkit.Desktop.ModernUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\LinnerToolkit.Desktop.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Mina.NET, Version=2.0.12.0, Culture=neutral, PublicKeyToken=bc4dde96e5154fe5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Binaries\Mina.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Codec\DataDecoder.cs" />
+    <Compile Include="Codec\DataEncoder.cs" />
+    <Compile Include="Codec\DefaultDemuxingProtocolCodecFactory.cs" />
+    <Compile Include="Codec\DefaultMessageDecoder.cs" />
+    <Compile Include="Codec\DefaultMessageEncoder.cs" />
+    <Compile Include="Codec\EnvironmentDeviceData.cs" />
+    <Compile Include="ViewModels\DeviceViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\TrainingPageViewModel.cs" />
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrainingPage.xaml.cs">
+      <DependentUpon>TrainingPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TrainingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Binaries\Mina.NET.dll" />
+    <Resource Include="Assets\Image\Main\Background.png" />
+    <Resource Include="Assets\Image\Main\Button_Close.png" />
+    <Resource Include="Assets\Image\Main\Button_Normal.png" />
+    <Resource Include="Assets\Image\Main\Button_Pressed.png" />
+    <Resource Include="Assets\Image\Training\Background.png" />
+    <Resource Include="Assets\Image\Training\BreatheSignal_1.png" />
+    <Resource Include="Assets\Image\Training\BreatheSignal_2.png" />
+    <Resource Include="Assets\Image\Training\Chair.png" />
+    <Resource Include="Assets\Image\Training\ChangeMusic_1.png" />
+    <Resource Include="Assets\Image\Training\ChangeMusic_2.png" />
+    <Resource Include="Assets\Image\Training\Human_1.png" />
+    <Resource Include="Assets\Image\Training\Human_2.png" />
+    <Resource Include="Assets\Image\Training\Human_3.png" />
+    <Resource Include="Assets\Image\Training\Human_4.png" />
+    <Resource Include="Assets\Image\Training\Human_5.png" />
+    <Resource Include="Assets\Image\Training\Human_6.png" />
+    <Resource Include="Assets\Image\Training\Human_7.png" />
+    <Resource Include="Assets\Image\Training\Human_8.png" />
+    <Resource Include="Assets\Image\Training\MachineSignal_1.png" />
+    <Resource Include="Assets\Image\Training\MachineSignal_2.png" />
+    <Resource Include="Assets\Image\Training\ProgressBar.png" />
+    <Resource Include="Assets\Image\Training\PulseSignal_1.png" />
+    <Resource Include="Assets\Image\Training\PulseSignal_2.png" />
+    <Resource Include="Assets\Image\Training\RaiseHand_1.png" />
+    <Resource Include="Assets\Image\Training\RaiseHand_2.png" />
+    <Resource Include="Assets\Image\Training\TeamFlag_Blue.png" />
+    <Resource Include="Assets\Image\Training\TeamFlag_Green.png" />
+    <Resource Include="Assets\Image\Training\TeamFlag_Red.png" />
+    <Resource Include="Assets\Image\Training\TeamFlag_Yellow.png" />
+    <Resource Include="Assets\Image\Training\Tile.png" />
+    <Resource Include="Assets\Image\Training\Tile_Gray.png" />
+    <Resource Include="Assets\Image\Training\WIFI_1.png" />
+    <Resource Include="Assets\Image\Training\WIFI_2.png" />
+    <Content Include="Binaries\CommonServiceLocator.dll" />
+    <Content Include="Binaries\FirstFloor.ModernUI.dll" />
+    <Content Include="Binaries\GalaSoft.MvvmLight.dll" />
+    <Content Include="Binaries\GalaSoft.MvvmLight.Extras.dll" />
+    <Content Include="Binaries\GalaSoft.MvvmLight.Platform.dll" />
+    <Content Include="Binaries\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Binaries\LinnerToolkit.Core.dll" />
+    <Content Include="Binaries\LinnerToolkit.Desktop.dll" />
+    <Content Include="Binaries\LinnerToolkit.Desktop.ModernUI.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

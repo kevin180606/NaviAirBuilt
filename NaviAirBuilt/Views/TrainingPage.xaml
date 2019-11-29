@@ -1,0 +1,98 @@
+﻿<controls:NavigationPage x:Class="NaviAirBuilt.Views.TrainingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NaviAirBuilt.Views"
+      xmlns:controls="clr-namespace:LinnerToolkit.Desktop.ModernUI.Windows.Controls;assembly=LinnerToolkit.Desktop.ModernUI"
+      xmlns:handyControl="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1600"
+      Title="TrainingPage">
+
+    <controls:NavigationPage.Resources>
+
+
+
+        <!--成员控件样式（大）-->
+        <Style x:Key="TrainerCtrlsBigStyle" TargetType="{x:Type ListView}" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListView">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                            <WrapPanel Name="wrapPanel" IsItemsHost="True"/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--成员控件样式（小）-->
+        <Style x:Key="TrainerCtrlsSmallStyle" TargetType="{x:Type ListView}" >
+            <Setter Property="FontSize" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListView">
+                        <WrapPanel Name="wrapPanel" IsItemsHost="True"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CenterAlignmentStyle" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+    </controls:NavigationPage.Resources>
+
+    <Canvas Name="root" >
+        <Canvas.Background>
+            <ImageBrush ImageSource="/Assets/Image/Training/Background.png" Stretch="Fill"/>
+        </Canvas.Background>
+        <!--监控主界面-->
+        <Grid Name="gridTraining" Width="1600" Height="900">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="78*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"   HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Left"  FontSize="20" Foreground="Yellow" Text="{Binding ProcessController.Position,StringFormat=训练时长：{0}}" Height="25"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="354*"/>
+                    <ColumnDefinition Width="477*"/>
+                    <ColumnDefinition Width="513*"/>
+                    <ColumnDefinition Width="256*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="219*"/>
+                    <RowDefinition Height="380*"/>
+                    <RowDefinition Height="103*"/>
+                </Grid.RowDefinitions>
+                <controls:AnimationButton x:Name="btnSerial" Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="77,80,77,79" Click="btnSerial_Click"                                        />
+                <controls:AnimationButton Grid.Column="1" x:Name="btnTCP" Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="138,80,139,79" Click="btnTCP_Click"                                        />
+                <handyControl:CirclePanel Grid.Row="1" Grid.Column="1"  >
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="10 0" Click="btnSerial_Click"      />
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"/>
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="10 0" Click="btnSerial_Click"  />
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"   />
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="10 0" Click="btnSerial_Click"      />
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"/>
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="10 0" Click="btnSerial_Click"  />
+                    <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"   />
+
+                </handyControl:CirclePanel>
+
+            </Grid>
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Height="60" Margin="0,0,0,30">
+                <controls:AnimationButton x:Name="btnGoBack" Style="{StaticResource DefaultButtonStyle}" Content="返回" Margin="10 0" Command="{Binding GoBackCommand}"                                        />
+            </StackPanel>
+        </Grid>
+
+
+    </Canvas>
+</controls:NavigationPage>
