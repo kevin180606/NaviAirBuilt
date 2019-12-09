@@ -1,18 +1,15 @@
-﻿using FirstFloor.ModernUI.Presentation;
+﻿using FirstFloor.ModernUI.Windows.Navigation;
 using LinnerToolkit.Desktop.ModernUI.Mvvm;
 using LinnerToolkit.Desktop.ModernUI.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace NaviAirBuilt.ViewModels
 {
-  public  class TrainingPageViewModel:ModernViewModelBase
+    public  class TrainingPageViewModel:ModernViewModelBase
     {
        // public ICommand GoBackCommand { get; }
+
+
+
 
         public TrainingPageViewModel(IModernNavigationService navigationService):base(navigationService)
         {
@@ -21,5 +18,14 @@ namespace NaviAirBuilt.ViewModels
             //    navigationService.NavigateTo("MainPage", null);
             //});
         }
+
+        public override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+          
+        }
+
+
+        
     }
 }

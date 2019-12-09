@@ -4,8 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NaviAirBuilt.Views"
+      xmlns:myControls ="clr-namespace:NaviAirBuilt.Controls"
       xmlns:controls="clr-namespace:LinnerToolkit.Desktop.ModernUI.Windows.Controls;assembly=LinnerToolkit.Desktop.ModernUI"
       xmlns:handyControl="https://handyorg.github.io/handycontrol"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="1600"
       Title="TrainingPage">
@@ -73,8 +75,8 @@
                     <RowDefinition Height="380*"/>
                     <RowDefinition Height="103*"/>
                 </Grid.RowDefinitions>
-                <controls:AnimationButton x:Name="btnSerial" Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="77,80,77,79" Click="btnSerial_Click"                                        />
-                <controls:AnimationButton Grid.Column="1" x:Name="btnTCP" Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="138,80,139,79" Click="btnTCP_Click"                                        />
+                <controls:AnimationButton x:Name="btnSerial"    handyControl:Poptip.Content="串口" handyControl:Poptip.Placement="Bottom"  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="77,80,77,79" Click="btnSerial_Click"                                        />
+                <controls:AnimationButton Grid.Column="1" x:Name="btnTCP"   Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="138,80,139,79" Click="btnTCP_Click"                                        />
                 <handyControl:CirclePanel Grid.Row="1" Grid.Column="1"  >
                     <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="串口测试" Margin="10 0" Click="btnSerial_Click"      />
                     <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"/>
@@ -86,6 +88,12 @@
                     <controls:AnimationButton  Style="{StaticResource DefaultButtonStyle}" Content="tcp测试" Margin="10 0" Click="btnTCP_Click"   />
 
                 </handyControl:CirclePanel>
+                <Button  Grid.Column="2"  handyControl:Poptip.Content="abc" handyControl:Poptip.Placement="Bottom"   Content="tcp测试" Margin="138,80,139,79" Click="btnTCP_Click"                                        />
+                <Viewbox Grid.Row="1" Stretch="Uniform">
+                    <myControls:Sprite />
+                </Viewbox>
+                
+
 
             </Grid>
             <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal" Height="60" Margin="0,0,0,30">

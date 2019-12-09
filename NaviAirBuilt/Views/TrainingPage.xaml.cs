@@ -9,6 +9,11 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using LiveCharts;
+using LiveCharts.Wpf;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace NaviAirBuilt.Views
 {
@@ -17,7 +22,8 @@ namespace NaviAirBuilt.Views
     /// </summary>
     public partial class TrainingPage : NavigationPage
     {
-     
+
+
 
         int actualWidth = 0, actualHeight = 0;
         public TrainingPage()
@@ -31,8 +37,13 @@ namespace NaviAirBuilt.Views
 
         private void TrainingPage_Loaded(object sender, RoutedEventArgs e)
         {
-      
+            //实例化一条折线图
+           
+          // DataContext = this;
         }
+
+       
+
 
     
 
@@ -157,5 +168,9 @@ namespace NaviAirBuilt.Views
         {
             throw new NotImplementedException();
         }
+
+        //expression-bodies  property accessors 
+
+      
     }
 }

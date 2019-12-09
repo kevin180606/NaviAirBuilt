@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="main" EntityNamespace="MainContext" ContextNamespace="MainContext" Class="MainDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="9a6beb7d-0ef6-4f5e-b6a1-00b5f4df0478" Provider="Devart.Data.SQLite.Linq.Provider.SQLiteDataProvider, Devart.Data.SQLite.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=E:\build\DataTestBase.db" Provider="Devart.Data.SQLite" />
+  <Table Name="&quot;main&quot;.test1" Member="Test1s">
+    <Type Name="Test1" ed:Guid="424ac1f1-4d7a-4e91-9e1a-14a11bae513d">
+      <Column Name="AutoId" Type="System.Int32" DbType="INT NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="7d84384a-a70a-4f5f-a115-d10b4f22791e" />
+      <Column Name="Name" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="0396c24c-c27c-40b9-a0d3-6a981e749607" />
+      <Column Name="Age" Type="System.Int32" DbType="INT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4918ad24-f5cf-4d0f-a9ac-4346e090d670" />
+      <Column Name="Address" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="c49ed597-4c43-4f7c-a735-c2734c1b172c" />
+    </Type>
+  </Table>
+</Database>

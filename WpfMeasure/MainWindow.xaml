@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfMeasure.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMeasure"  Height="522" Width="594" Loaded="Window_Loaded" 
+        mc:Ignorable="d"
+        Title="MainWindow" >
+    <Canvas>
+        <local:MyPanelParent x:Name="myPanelParent1"  Height="400" Width="400" Background="Green" Canvas.Left="10" Canvas.Top="10">
+            <local:MyPanel Margin="10" x:Name="myPanel1" Background="Red" MinWidth="150" Width="200"  MaxWidth="250"/>
+            <local:MyPanel Margin="10"  x:Name="myPanel2" Background="Red" MinWidth="150" Width="200" MaxWidth="250"/>
+        </local:MyPanelParent>
+    </Canvas>
+</Window>
